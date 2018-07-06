@@ -1,1 +1,2 @@
 2018/07/06 16:12:00 [emerg] 9476#16092: unknown directive "rtmp" in F:\gitContent\Live-broadcast\nginx-1.14.0/conf/nginx.conf:119
+2018/07/06 16:12:05 [error] 5968#17152: *1 CreateFile() "F:\gitContent\Live-broadcast\nginx-1.14.0/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
