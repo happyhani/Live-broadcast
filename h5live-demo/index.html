@@ -7,6 +7,48 @@
   <title>video</title>
 </head>
 <body>
-  
+  <!-- 基本用法，下方控制条的显示隐藏 -->
+  <!-- <video src="video1.mp4" controls controlslist="nofullscreen"></video> -->
+  <!-- 贴图 -->
+  <!-- <video src="video1.mp4" controls poster="../2-1.png"></video> -->
+  <!-- 自动播放 静音 -->
+  在移动端，非静音的视频是不允许自动播放的
+  <!-- <video src="video1.mp4" controls autoplay muted></video> -->
+  <!-- 循环播放 -->
+  <!-- <video src="video1.mp4" controls loop></video> -->
+  <!-- 预加载 -->
+  <!-- <video src="video1.mp4" controls preload></video> -->
+  <!-- 音量控制 播放时间控制-->
+  <!-- <video src="video1.mp4" id="_volume" controls></video>
+  <script>
+    _volume.volume = '0.2'; // 音量
+    _volume.currentTime = 20; // 当前播放位置 20s
+  </script> -->
+  <!-- 播放地址切换 高清标清 -->
+  <!-- <video src="video1.mp4" id="_volume" controls poster="../2-1.png"></video>
+  <script>
+    console.log(_volume.src) // 已经转换成绝对地址
+    setTimeout(function(){
+      _volume.src='./video2.mp4';
+      _volume.volume = '0.2';
+      _volume.autoplay = 'autoplay'
+    },8000);
+  </script> -->
+  <!-- 网络问题，或CDN不稳定时 -->
+  <!-- <video id="_volume" controls poster="../2-1.png">
+    <source src="video1.mp4" type="video/mp4">
+    <source src="video2.mp4">
+  </video> -->
+  <!-- 视频地址监控 上报 -->
+  <video id="_volume" controls poster="../2-1.png">
+    <source src="video1.mp4" type="video/mp4">
+    <source src="video2.mp4">
+  </video>
+  <script>
+    setTimeout(function(){
+      console.log(_volume.currentSrc);
+
+    },1000)
+  </script>
 </body>
 </html>

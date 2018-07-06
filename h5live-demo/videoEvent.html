@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>video事件</title>
+</head>
+<body>
+  <!--  -->
+  <video id="video" controls poster="../2-1.png">
+    <!-- <source src="video1.mp4" type="video/mp4"> -->
+    <source src="http://ugclx.video.gtimg.com/uwMRJfz-r5jAYaQXGdGnC2_ppdhgmrDlPaRvaV7F2Ic/k0711q7mrm5.mp4?sdtfrom=v1010&guid=5b74596e70682c017dcacad0b7cc3af2&vkey=E8F4E85E09F4C3FD851E11F489DE036320B6ECB06B6F3CA1D47505C0D45E03B65B39654C4462573AE9DF6B7C18DA85B82E94364BA4D7DB453AF9695D1D902F2FA1A86C35F79A0C1EE049271F4ADD3B1F106C46706FDD28C5116E3A498F0851E3A306839345D759C5C8A7C06F089EF4228AD64E4652CE926D">
+  </video> 
+
+  <script>
+    console.log('durationchange', video.duration); // 视频时长NaN
+    video.addEventListener('loadstart', function(e){
+      console.log('loadstart');
+    })
+    video.addEventListener('durationchange', function(e){
+      console.log('durationchange', video.duration); // 加载完原信息之后才能拿到视频时长
+    })
+    video.addEventListener('loadedmetadata', function(e){
+      console.log('视频元数据加载完loadedmetadata'); 
+    })
+    video.addEventListener('loadeddata', function(e){
+      console.log('loadeddata没有足够数据播放下一个视频的片段'); 
+    })
+    video.addEventListener('progress', function(e){
+      console.log('progress'); 
+    })
+    video.addEventListener('canplay', function(e){
+      console.log('canplay'); 
+    })
+    video.addEventListener('canplaythrough', function(e){
+      console.log('流畅播放canplaythrough'); 
+    })
+    video.addEventListener('play', function(e){
+      console.log('play'); 
+    })
+    video.addEventListener('pause', function(e){
+      console.log('pause'); 
+    })
+    video.addEventListener('seeking', function(e){
+      console.log('seeking'); 
+    })
+    video.addEventListener('seeked', function(e){
+      console.log('seeked'); 
+    })
+    video.addEventListener('waiting', function(e){
+      console.log('waiting'); 
+    })
+    video.addEventListener('playing', function(e){
+      console.log('playing'); 
+    })
+    video.addEventListener('timeupdate', function(e){
+      console.log('timeupdate'); // 时间进度条
+    })
+    video.addEventListener('ended', function(e){
+      console.log('ended'); // 插入广告
+    })
+    video.addEventListener('error', function(e){
+      console.log('error',e); // 查看错误状态码 e.code
+    })
+  </script>
+</body>
+</html>
