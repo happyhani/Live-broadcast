@@ -8,3 +8,5 @@
 127.0.0.1 - - [06/Jul/2018:16:12:25 +0800] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Safari/537.36"
 127.0.0.1 - - [06/Jul/2018:16:12:25 +0800] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Safari/537.36"
 127.0.0.1 - - [06/Jul/2018:16:12:26 +0800] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Safari/537.36"
+10.10.10.141 - - [06/Jul/2018:19:17:10 +0800] "GET / HTTP/1.1" 200 612 "-" "avast! Antivirus"
+10.10.10.141 - - [06/Jul/2018:19:17:17 +0800] "GET /HNAP1/ HTTP/1.1" 404 169 "-" "avast! Antivirus"
